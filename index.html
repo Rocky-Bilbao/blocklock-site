@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlockLock Privacy Policy</title>
+<meta name="description" content="BlockLock collects no data. No account, no analytics, no server. This page explains every permission the app asks for and why.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  /* Light is the default. Dark mode deliberately uses the app's own surface colours, so the
+     policy and the product look like the same thing. */
+  :root {
+    --bg: #F7F7F5;
+    --surface: #FFFFFF;
+    --surface-2: #EEEEEA;
+    --ink: #16181C;
+    --muted: #565A62;
+    --faint: #83878E;
+    --hairline: #E2E2DE;
+    --accent: #2C6FA8;
+    --accent-soft: #E5EEF6;
+    --ok: #2F7A55;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17181B;
+      --surface: #202226;
+      --surface-2: #26282D;
+      --ink: #EDEEF0;
+      --muted: #A8AAB0;
+      --faint: #8B8D93;
+      --hairline: #33353A;
+      --accent: #4DA3E8;
+      --accent-soft: rgba(77, 163, 232, 0.14);
+      --ok: #5FBF8F;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17181B;
+    --surface: #202226;
+    --surface-2: #26282D;
+    --ink: #EDEEF0;
+    --muted: #A8AAB0;
+    --faint: #8B8D93;
+    --hairline: #33353A;
+    --accent: #4DA3E8;
+    --accent-soft: rgba(77, 163, 232, 0.14);
+    --ok: #5FBF8F;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; }
+  ::selection { background: var(--accent-soft); }
+
+  .wrap { max-width: 1140px; margin: 0 auto; padding: 52px 24px 88px; }
+
+  header.masthead {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap;
+    padding-bottom: 26px; margin-bottom: 38px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .wordmark {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px; font-weight: 500; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .wordmark b { color: var(--ink); font-weight: 500; }
+  .doc-meta {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 12px; color: var(--faint); text-align: right; line-height: 1.6;
+  }
+
+  h1 {
+    font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 800; font-size: clamp(2rem, 4.2vw, 2.9rem);
+    letter-spacing: -0.015em; text-wrap: balance; margin: 0 0 14px;
+  }
+  .thesis {
+    font-size: 1.15rem; max-width: 48ch; color: var(--muted);
+    font-style: italic; margin: 0;
+  }
+  .thesis strong { color: var(--ink); font-style: normal; font-weight: 600; }
+
+  .glance {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--hairline); border: 1px solid var(--hairline);
+    border-radius: 10px; overflow: hidden; margin: 32px 0 48px;
+  }
+  .glance-item { background: var(--surface); padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; }
+  .glance-label {
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10.5px;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint);
+  }
+  .glance-value {
+    font-family: Archivo, sans-serif; font-weight: 700; font-size: 1.02rem;
+    color: var(--ok); display: flex; align-items: center; gap: 6px;
+  }
+  .glance-value svg { width: 15px; height: 15px; flex: none; }
+
+  .layout { display: grid; grid-template-columns: 210px minmax(0, 700px); gap: 60px; align-items: start; }
+
+  nav.toc { position: sticky; top: 36px; display: flex; flex-direction: column; gap: 2px; }
+  nav.toc a {
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12.5px;
+    color: var(--muted); text-decoration: none; padding: 6px 0 6px 12px;
+    border-left: 2px solid transparent; line-height: 1.4;
+  }
+  nav.toc a:hover, nav.toc a:focus-visible { color: var(--accent); border-left-color: var(--accent); }
+  nav.toc .num { color: var(--faint); margin-right: 6px; }
+
+  article section { padding-top: 8px; margin-bottom: 50px; scroll-margin-top: 28px; }
+  article section:last-of-type { margin-bottom: 0; }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 15px; }
+  .sec-num { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 13px; color: var(--accent); padding-top: 4px; }
+  h2 {
+    font-family: Archivo, sans-serif; font-weight: 700; font-size: 1.42rem;
+    letter-spacing: -0.008em; margin: 0; text-wrap: balance;
+  }
+
+  article p { margin: 0 0 14px; max-width: 66ch; }
+  article p:last-child { margin-bottom: 0; }
+  article ul { margin: 0 0 14px; padding-left: 1.25em; max-width: 64ch; }
+  article li { margin-bottom: 7px; }
+  article strong { font-weight: 600; color: var(--ink); }
+
+  .perm-table {
+    display: flex; flex-direction: column; border: 1px solid var(--hairline);
+    border-radius: 10px; overflow: hidden; margin: 18px 0 20px;
+  }
+  .perm-row { display: grid; grid-template-columns: 210px 1fr; gap: 18px; padding: 14px 18px; background: var(--surface); }
+  .perm-row + .perm-row { border-top: 1px solid var(--hairline); }
+  .perm-name { font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12.5px; color: var(--accent); line-height: 1.5; word-break: break-word; }
+  .perm-why { font-size: 15.5px; color: var(--muted); line-height: 1.55; }
+
+  .callout {
+    background: var(--accent-soft); border-radius: 10px; padding: 16px 20px;
+    margin: 18px 0; font-size: 15.5px; color: var(--ink); max-width: 64ch;
+  }
+
+  address {
+    font-style: normal; display: inline-flex; align-items: center; gap: 8px;
+    background: var(--surface-2); border-radius: 8px; padding: 10px 16px;
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 14px;
+  }
+  address a { color: var(--accent); text-decoration: none; }
+  address a:hover { text-decoration: underline; }
+
+  footer {
+    margin-top: 60px; padding-top: 22px; border-top: 1px solid var(--hairline);
+    font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 11.5px;
+    color: var(--faint); letter-spacing: 0.03em;
+  }
+
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  @media (max-width: 880px) {
+    .layout { grid-template-columns: 1fr; gap: 8px; }
+    nav.toc { display: none; }
+    .glance { grid-template-columns: repeat(2, 1fr); }
+    .perm-row { grid-template-columns: 1fr; gap: 6px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="wordmark"><b>BlockLock</b> · Privacy Policy</div>
+    <div class="doc-meta">EFFECTIVE 6 SEP 2026<br>v2.0</div>
+  </header>
+
+  <h1>Privacy Policy</h1>
+  <p class="thesis">The short version: <strong>nothing you do inside BlockLock ever leaves your phone.</strong> No account, no analytics, no ads, no server. This page explains exactly why the app asks for each permission it does.</p>
+
+  <div class="glance">
+    <div class="glance-item">
+      <span class="glance-label">Data collected</span>
+      <span class="glance-value"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10.5l4 4L16 6"/></svg>None</span>
+    </div>
+    <div class="glance-item">
+      <span class="glance-label">Shared with 3rd parties</span>
+      <span class="glance-value"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10.5l4 4L16 6"/></svg>None</span>
+    </div>
+    <div class="glance-item">
+      <span class="glance-label">Ads or trackers</span>
+      <span class="glance-value"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10.5l4 4L16 6"/></svg>None</span>
+    </div>
+    <div class="glance-item">
+      <span class="glance-label">Account required</span>
+      <span class="glance-value"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10.5l4 4L16 6"/></svg>No</span>
+    </div>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Sections">
+      <a href="#what"><span class="num">01</span>What BlockLock Does</a>
+      <a href="#data"><span class="num">02</span>Data We Collect</a>
+      <a href="#foreground"><span class="num">03</span>Seeing Which App Is Open</a>
+      <a href="#overlay"><span class="num">04</span>Display Over Other Apps</a>
+      <a href="#admin"><span class="num">05</span>Device Admin</a>
+      <a href="#calls"><span class="num">06</span>Contacts &amp; Phone Calls</a>
+      <a href="#permissions"><span class="num">07</span>Other Permissions</a>
+      <a href="#stored"><span class="num">08</span>Stored On Your Device</a>
+      <a href="#billing"><span class="num">09</span>Purchases &amp; Billing</a>
+      <a href="#retention"><span class="num">10</span>Retention &amp; Deletion</a>
+      <a href="#children"><span class="num">11</span>Children's Privacy</a>
+      <a href="#changes"><span class="num">12</span>Changes to This Policy</a>
+      <a href="#contact"><span class="num">13</span>Contact</a>
+    </nav>
+
+    <article>
+
+      <section id="what">
+        <div class="sec-head"><span class="sec-num">01</span><h2>What BlockLock Does</h2></div>
+        <p>BlockLock is an app-blocking tool. You choose a mode &mdash; block a set of apps, allow only a set of apps, or lock the phone down to phone calls only &mdash; and a duration. For that duration, BlockLock keeps you off the apps you told it to keep you off. That is the entire product. It does not need to know who you are in order to do it.</p>
+      </section>
+
+      <section id="data">
+        <div class="sec-head"><span class="sec-num">02</span><h2>Data We Collect</h2></div>
+        <p>We collect nothing. BlockLock does not operate any server, and the app contains no analytics, advertising, or tracking software development kit (SDK) of any kind.</p>
+        <p>Everything the app needs in order to work is written to a private storage area on your own device and is never transmitted anywhere. We never see your name, your contacts, your messages, your browsing activity, your location, or the contents of any app you use. There is nothing for us to see: the app makes no network request at all except the one described in Section 09.</p>
+        <p>BlockLock also sets <strong>allowBackup="false"</strong>, so its data is excluded from Android's automatic cloud backup. It stays on the device it was created on.</p>
+      </section>
+
+      <section id="foreground">
+        <div class="sec-head"><span class="sec-num">03</span><h2>Seeing Which App Is Open</h2></div>
+        <p>To block an app, BlockLock has to know which app you just opened. It does this with Android's <strong>Usage Access</strong> permission, which you grant manually in system settings.</p>
+        <p>BlockLock uses it for one thing only: reading the <strong>package name</strong> of the app that most recently came to the foreground &mdash; the identifier, such as <span class="perm-name">com.example.someapp</span> &mdash; so it can check that name against your chosen mode. If the app is not permitted during your session, BlockLock covers it. If it is permitted, nothing happens.</p>
+        <div class="callout"><strong>What it does not do:</strong> BlockLock never reads the contents of your screen, your keystrokes, or anything inside another app. It does not build a profile of how long you spend in each app, and it does not read your usage history. It asks a single question, once a second while a session is running: which app is in front right now?</div>
+        <p>BlockLock deliberately does <em>not</em> use an Accessibility Service. Accessibility is the more common way for blocking apps to do this, but it is a far broader permission than the job requires, and Android grants it far more reach than reading a package name.</p>
+      </section>
+
+      <section id="overlay">
+        <div class="sec-head"><span class="sec-num">04</span><h2>Display Over Other Apps</h2></div>
+        <p>When you open an app that your session does not permit, BlockLock covers it with a plain full-screen panel showing how much time is left. That panel is what the <strong>Display over other apps</strong> permission is for.</p>
+        <p>The permission lets BlockLock draw its own window on top of other apps. It does not let BlockLock see, read, or interact with whatever is underneath. Nothing is captured and nothing is recorded &mdash; the app draws a cover, and that is all.</p>
+      </section>
+
+      <section id="admin">
+        <div class="sec-head"><span class="sec-num">05</span><h2>Device Admin</h2></div>
+        <p>Total Lockdown works by locking your screen for the length of the session, which requires Android's <strong>Device Administrator</strong> permission. This permission sounds alarming, and it is worth being exact about its scope.</p>
+        <div class="callout">BlockLock requests exactly one device-admin policy: <strong>force-lock</strong>. That is the ability to lock the screen, and nothing else. It <strong>cannot</strong> erase your phone, change or reset your password, disable your camera, restrict your accounts, or monitor your activity. Those are separate policies, and BlockLock does not request any of them. You can verify this in Android's own device admin settings screen, which lists precisely what an app has asked for.</div>
+        <p>You can revoke device admin at any time in system settings. Doing so does not remove any other function of the app; only Total Lockdown depends on it.</p>
+      </section>
+
+      <section id="calls">
+        <div class="sec-head"><span class="sec-num">06</span><h2>Contacts &amp; Phone Calls</h2></div>
+        <p>Total Lockdown keeps your phone locked, which would normally also mean you could not make a call. So BlockLock includes its own small dialer and contact list, shown over the lock screen, letting you reach someone without unlocking the device and defeating the session you asked for.</p>
+        <p>This is optional. Both permissions below are requested only if you turn on <strong>&ldquo;Allow calls during lockdown&rdquo;</strong>. If you leave it off, BlockLock never asks for either, and the dialer is never shown.</p>
+        <div class="perm-table">
+          <div class="perm-row">
+            <div class="perm-name">READ_CONTACTS</div>
+            <div class="perm-why">Shows a searchable list of your contacts in BlockLock's own dialer. Your contacts are read from the device each time you open that screen, held in memory only while it is open, and <strong>never stored by the app, never written to its files, and never transmitted anywhere.</strong> Closing the screen discards them.</div>
+          </div>
+          <div class="perm-row">
+            <div class="perm-name">CALL_PHONE</div>
+            <div class="perm-why">Places the call you tap directly, so the phone does not have to be unlocked first. BlockLock does not read your call log, does not know who you have called before, and does not record calls.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="permissions">
+        <div class="sec-head"><span class="sec-num">07</span><h2>Other Permissions</h2></div>
+        <p>The remaining permissions are routine and involve no personal information at all.</p>
+        <div class="perm-table">
+          <div class="perm-row">
+            <div class="perm-name">FOREGROUND_SERVICE<br>FOREGROUND_SERVICE_SPECIAL_USE</div>
+            <div class="perm-why">Keeps blocking running for the whole session. This is also why you see an ongoing notification while a session is active &mdash; Android requires it, and it is your way back into the app.</div>
+          </div>
+          <div class="perm-row">
+            <div class="perm-name">SCHEDULE_EXACT_ALARM</div>
+            <div class="perm-why">Ends your session at the exact time it is meant to, and starts scheduled sessions on time. It simply wakes the app at the right moment.</div>
+          </div>
+          <div class="perm-row">
+            <div class="perm-name">RECEIVE_BOOT_COMPLETED</div>
+            <div class="perm-why">Lets an active session or a saved schedule resume correctly if your phone restarts, instead of silently losing track of where it was.</div>
+          </div>
+          <div class="perm-row">
+            <div class="perm-name">REQUEST_IGNORE_<br>BATTERY_OPTIMIZATIONS</div>
+            <div class="perm-why">Asks Android not to shut BlockLock down mid-session to save power. Many phones will otherwise stop it and quietly end your session early. This is a request you can decline.</div>
+          </div>
+          <div class="perm-row">
+            <div class="perm-name">POST_NOTIFICATIONS</div>
+            <div class="perm-why">Shows the session countdown, and warns you when something has gone wrong &mdash; a permission withdrawn mid-session, or a scheduled session that could not start.</div>
+          </div>
+          <div class="perm-row">
+            <div class="perm-name">INTERNET</div>
+            <div class="perm-why">Used solely to talk to Google Play's billing system when you make a purchase. BlockLock makes no other network request, ever &mdash; see Section 09.</div>
+          </div>
+          <div class="perm-row">
+            <div class="perm-name">&lt;queries&gt;</div>
+            <div class="perm-why">To let you pick which apps to block, BlockLock needs the list of apps you can launch. It requests a narrowly scoped view of that list rather than the broad <span class="perm-name">QUERY_ALL_PACKAGES</span> permission, and the list never leaves your device.</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stored">
+        <div class="sec-head"><span class="sec-num">08</span><h2>What Is Stored On Your Device</h2></div>
+        <p>For completeness, this is everything BlockLock writes to its private storage. All of it is local, none of it is transmitted, and all of it is deleted when you uninstall the app:</p>
+        <ul>
+          <li>Your selected mode, and the app lists you chose for Allowlist and Blocklist</li>
+          <li>Your schedule &mdash; days, start time, duration, and mode</li>
+          <li>The current session's end time, and whether calls are allowed during lockdown</li>
+          <li>When your free trial started, and whether you have purchased the app</li>
+          <li>How much of today's free Total Lockdown allowance you have used</li>
+          <li>A count of how many times you opened a blocked app, by app, so the app can show you your own activity. This is <strong>kept for 90 days and then automatically deleted</strong>, and it records only that an app was opened and blocked &mdash; never what you did in it.</li>
+        </ul>
+      </section>
+
+      <section id="billing">
+        <div class="sec-head"><span class="sec-num">09</span><h2>Purchases &amp; Billing</h2></div>
+        <p>BlockLock offers one optional, one-time purchase that unlocks every mode permanently after the free trial. That purchase is processed entirely by Google Play's billing system.</p>
+        <p>BlockLock never receives, stores, or has any access to your card details, billing address, or any other payment information. It receives only a confirmation from Google Play that the purchase succeeded, which is what unlocks the app. Google's own privacy policy governs that transaction.</p>
+      </section>
+
+      <section id="retention">
+        <div class="sec-head"><span class="sec-num">10</span><h2>Retention &amp; Deletion</h2></div>
+        <p>Because everything lives only in private storage on your device, deleting your data is as simple as it should be: <strong>uninstalling BlockLock deletes all of it immediately.</strong> There is no copy anywhere else for you to ask us to remove, because none was ever made. There is no account to close and no deletion request to file.</p>
+      </section>
+
+      <section id="children">
+        <div class="sec-head"><span class="sec-num">11</span><h2>Children's Privacy</h2></div>
+        <p>BlockLock is not directed at children and is not designed to collect information from anyone, of any age &mdash; consistent with the rest of this policy, it has no mechanism to collect personal information at all.</p>
+      </section>
+
+      <section id="changes">
+        <div class="sec-head"><span class="sec-num">12</span><h2>Changes to This Policy</h2></div>
+        <p>If this policy changes, the update will be posted on this same page with a new effective date at the top. Given how little the app does with data, we do not expect that to happen often.</p>
+      </section>
+
+      <section id="contact">
+        <div class="sec-head"><span class="sec-num">13</span><h2>Contact</h2></div>
+        <p>Questions about this policy or the app can go here:</p>
+        <address>✉ <a href="mailto:support.blocklock@gmail.com">support.blocklock@gmail.com</a></address>
+      </section>
+
+    </article>
+  </div>
+
+  <footer>BLOCKLOCK &mdash; APP-BLOCKING, LOCALLY. NO ACCOUNT. NO SERVER. NO EXCEPTIONS.</footer>
+</div>
+
+</body>
+</html>
