@@ -135,6 +135,7 @@
   article ul { margin: 0 0 14px; padding-left: 1.25em; max-width: 64ch; }
   article li { margin-bottom: 7px; }
   article strong { font-weight: 600; color: var(--ink); }
+  article p a { color: var(--accent); text-underline-offset: 2px; }
 
   .perm-table {
     display: flex; flex-direction: column; border: 1px solid var(--hairline);
@@ -180,7 +181,7 @@
 
   <header class="masthead">
     <div class="wordmark"><b>BlockLock</b> · Privacy Policy</div>
-    <div class="doc-meta">EFFECTIVE 6 SEP 2026<br>UPDATED 22 OCT 2026 &middot; v2.1</div>
+    <div class="doc-meta">EFFECTIVE 6 SEP 2026<br>UPDATED 29 OCT 2026 &middot; v2.2</div>
   </header>
 
   <h1>Privacy Policy</h1>
@@ -299,7 +300,7 @@
           </div>
           <div class="perm-row">
             <div class="perm-name">INTERNET</div>
-            <div class="perm-why">Used solely to talk to Google Play's billing system when you make a purchase. BlockLock makes no other network request, ever &mdash; see Section 09.</div>
+            <div class="perm-why">Used solely to talk to Google Play's billing system: to check what you have bought, to show you the current price, and when you make a purchase. BlockLock makes no other network request, ever &mdash; see Section 09.</div>
           </div>
           <div class="perm-row">
             <div class="perm-name">&lt;queries&gt;</div>
@@ -315,7 +316,8 @@
           <li>Your selected mode, and the app lists you chose for Allowlist and Blocklist</li>
           <li>Your schedule &mdash; days, start time, duration, and mode</li>
           <li>The current session's end time, and whether calls are allowed during lockdown</li>
-          <li>When your free trial started, and whether you have purchased the app</li>
+          <li>When your free trial started, how long it is, and whether you have purchased the app</li>
+          <li>The price Google Play last showed for the purchase, so it can be shown to you before you buy</li>
           <li>How much of today's free Total Lockdown allowance you have used</li>
           <li>A count of how many times you opened a blocked app, by app, so the app can show you your own activity. This is <strong>kept for 90 days and then automatically deleted</strong>, and it records only that an app was opened and blocked &mdash; never what you did in it.</li>
         </ul>
@@ -324,9 +326,9 @@
       <section id="billing">
         <div class="sec-head"><span class="sec-num">09</span><h2>Purchases, Billing &amp; Refunds</h2></div>
         <p>BlockLock offers one optional, one-time purchase that unlocks every mode permanently after the free trial. That purchase is processed entirely by Google Play's billing system.</p>
-        <p>BlockLock never receives, stores, or has any access to your card details, billing address, or any other payment information. It receives only a confirmation from Google Play that the purchase succeeded, which is what unlocks the app. Google's own privacy policy governs that transaction.</p>
+        <p>BlockLock never receives, stores, or has any access to your card details, billing address, or any other payment information. It receives only the price Google Play shows for the purchase in your country, and a confirmation from Google Play that the purchase succeeded, which is what unlocks the app. Google's own privacy policy governs that transaction.</p>
         <div id="refunds">
-          <p><strong>Refunds.</strong> BlockLock has a free 14-day trial with every feature, so you can decide before you pay. For that reason a purchase is final once it is made. There is nothing to cancel, because there is no subscription.</p>
+          <p><strong>Refunds.</strong> BlockLock has a free 7-day trial with every feature, so you can decide before you pay. For that reason a purchase is final once it is made. There is nothing to cancel, because there is no subscription.</p>
           <p>Google Play's own refund options, such as its 48-hour window, may still apply, and Google decides those. If something went wrong with your purchase &mdash; you were charged twice, or you paid and the app did not unlock &mdash; <a href="#contact">email us</a> with your Google Play order number and we will fix it or refund you. Nothing here limits the rights you have under the law where you live.</p>
           <p>If a purchase is refunded, the unlock is removed from the app. That can take a few days to show.</p>
         </div>
