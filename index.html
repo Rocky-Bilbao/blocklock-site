@@ -181,7 +181,7 @@
 
   <header class="masthead">
     <div class="wordmark"><b>BlockLock</b> · Privacy Policy</div>
-    <div class="doc-meta">EFFECTIVE 6 SEP 2026<br>UPDATED 3 NOV 2026 &middot; v2.3</div>
+    <div class="doc-meta">EFFECTIVE 6 SEP 2026<br>UPDATED 9 NOV 2026 &middot; v2.4</div>
   </header>
 
   <h1>Privacy Policy &amp; Purchase Terms</h1>
@@ -253,9 +253,9 @@
 
       <section id="admin">
         <div class="sec-head"><span class="sec-num">05</span><h2>Device Admin</h2></div>
-        <p>Total Lockdown works by locking your screen for the length of the session, which requires Android's <strong>Device Administrator</strong> permission. This permission sounds alarming, and it is worth being exact about its scope.</p>
+        <p>BlockLock uses Android's <strong>Device Administrator</strong> permission for two things. Total Lockdown locks your screen for the length of the session. And in every mode, while a session is running, an app that holds this permission cannot be uninstalled, so a session cannot be ended by uninstalling BlockLock. BlockLock asks for it before your first session. This permission sounds alarming, and it is worth being exact about its scope.</p>
         <div class="callout">BlockLock requests exactly one device-admin policy: <strong>force-lock</strong>. That is the ability to lock the screen, and nothing else. It <strong>cannot</strong> erase your phone, change or reset your password, disable your camera, restrict your accounts, or monitor your activity. Those are separate policies, and BlockLock does not request any of them. You can verify this in Android's own device admin settings screen, which lists precisely what an app has asked for.</div>
-        <p>You can revoke device admin at any time in system settings. Doing so does not remove any other function of the app; only Total Lockdown depends on it.</p>
+        <p>You can revoke device admin in your phone's settings whenever no session is running (during a session, your phone's Settings app is closed until the session ends). BlockLock never offers to revoke it from inside the app. Once it is revoked, you can uninstall BlockLock normally, and no new session can start until you grant it again.</p>
       </section>
 
       <section id="calls">
