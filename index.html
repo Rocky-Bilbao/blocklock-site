@@ -181,16 +181,16 @@
 
   <header class="masthead">
     <div class="wordmark"><b>BlockLock</b> · Privacy Policy</div>
-    <div class="doc-meta">EFFECTIVE 6 SEP 2026<br>UPDATED 9 NOV 2026 &middot; v2.4</div>
+    <div class="doc-meta">EFFECTIVE 6 SEP 2026<br>UPDATED 14 NOV 2026 &middot; v2.6</div>
   </header>
 
   <h1>Privacy Policy &amp; Purchase Terms</h1>
-  <p class="thesis">The short version: <strong>nothing you do inside BlockLock ever leaves your phone.</strong> No account, no analytics, no ads, no server. This page explains exactly why the app asks for each permission it does.</p>
+  <p class="thesis">The short version: <strong>nothing you do inside BlockLock leaves your phone unless you send it to us yourself.</strong> No account, no analytics, no ads, no server. The one exception is a problem report you choose to email us (Section 10). This page explains exactly why the app asks for each permission it does.</p>
 
   <div class="glance">
     <div class="glance-item">
       <span class="glance-label">Data collected</span>
-      <span class="glance-value"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10.5l4 4L16 6"/></svg>None</span>
+      <span class="glance-value"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 10.5l4 4L16 6"/></svg>Only reports you send</span>
     </div>
     <div class="glance-item">
       <span class="glance-label">Shared with 3rd parties</span>
@@ -217,10 +217,11 @@
       <a href="#permissions"><span class="num">07</span>Other Permissions</a>
       <a href="#stored"><span class="num">08</span>Stored On Your Device</a>
       <a href="#billing"><span class="num">09</span>Purchases, Billing &amp; Refunds</a>
-      <a href="#retention"><span class="num">10</span>Retention &amp; Deletion</a>
-      <a href="#children"><span class="num">11</span>Children's Privacy</a>
-      <a href="#changes"><span class="num">12</span>Changes to This Policy</a>
-      <a href="#contact"><span class="num">13</span>Contact</a>
+      <a href="#reports"><span class="num">10</span>Problem Reports</a>
+      <a href="#retention"><span class="num">11</span>Retention &amp; Deletion</a>
+      <a href="#children"><span class="num">12</span>Children's Privacy</a>
+      <a href="#changes"><span class="num">13</span>Changes to This Policy</a>
+      <a href="#contact"><span class="num">14</span>Contact</a>
     </nav>
 
     <article>
@@ -232,16 +233,20 @@
 
       <section id="data">
         <div class="sec-head"><span class="sec-num">02</span><h2>Data We Collect</h2></div>
-        <p>We collect nothing. BlockLock does not operate any server, and the app contains no analytics, advertising, or tracking software development kit (SDK) of any kind.</p>
-        <p>Everything the app needs in order to work is written to a private storage area on your own device and is never transmitted anywhere. We never see your name, your contacts, your messages, your browsing activity, your location, or the contents of any app you use. There is nothing for us to see: the app makes no network request at all except the one described in Section 09.</p>
+        <p>BlockLock collects nothing on its own. It does not operate any server, and the app contains no analytics, advertising, or tracking software development kit (SDK) of any kind.</p>
+        <p>Everything the app needs in order to work is written to a private storage area on your own device and is never transmitted by the app. We never see your contacts, your messages, your browsing activity, your location, or the contents of any app you use. The app makes no network request except those described in Section 09.</p>
+        <p><strong>The one exception is a problem report.</strong> If you use <strong>Report a problem</strong>, you send us an email from your own email app, with technical details about your phone and BlockLock attached. Nothing is sent unless you press Send, and you can read everything first. Section 10 lists exactly what a report contains.</p>
         <p>BlockLock also sets <strong>allowBackup="false"</strong>, so its data is excluded from Android's automatic cloud backup. It stays on the device it was created on.</p>
+        <p>You can save a copy yourself. <strong>Settings &rarr; Export settings</strong> writes your app lists, schedules, settings and focus history to a file in your phone's Downloads folder, and <strong>Progress &rarr; Export as CSV</strong> shares your daily focus totals. These files are made on your phone, only when you ask, and go only where you put or send them; BlockLock never uploads them. Other apps that are allowed to read your Downloads folder, such as a file manager, can read a file saved there. <strong>Settings &rarr; Import settings</strong> reads such a file back in; it changes only your lists, schedules, settings and focus history, never your purchase or trial.</p>
       </section>
 
       <section id="foreground">
         <div class="sec-head"><span class="sec-num">03</span><h2>Seeing Which App Is Open</h2></div>
         <p>To block an app, BlockLock has to know which app you just opened. It does this with Android's <strong>Usage Access</strong> permission, which you grant manually in system settings.</p>
         <p>BlockLock uses it for one thing only: reading the <strong>package name</strong> of the app that most recently came to the foreground &mdash; the identifier, such as <span class="perm-name">com.example.someapp</span> &mdash; so it can check that name against your chosen mode. If the app is not permitted during your session, BlockLock covers it. If it is permitted, nothing happens.</p>
-        <div class="callout"><strong>What it does not do:</strong> BlockLock never reads the contents of your screen, your keystrokes, or anything inside another app. It does not build a profile of how long you spend in each app, and it does not read your usage history. It asks a single question, once a second while a session is running: which app is in front right now?</div>
+        <div class="callout"><strong>What it does not do:</strong> BlockLock never reads the contents of your screen, your keystrokes, or anything inside another app. It does not build a profile of how long you spend in each app, and it does not read your usage history. It asks a single question, twice a second while a session is running: which app is in front right now?</div>
+        <p>While a session runs, BlockLock also notes in its own activity log on your phone when the app in front <em>changes</em> and what it did about it (for example, &ldquo;covered&rdquo;). This log holds package names and times only, stays on your phone, deletes itself after about two days, and leaves the phone only if you send it in a problem report (Section 10).</p>
+        <p>On <strong>some phones</strong>, BlockLock also reads, from the same Usage Access, when the screen turned on or off and when the lock screen appeared or went away. These are system events, not app usage; they let BlockLock check that it can show on your lock screen (Section 04).</p>
         <p>BlockLock deliberately does <em>not</em> use an Accessibility Service. Accessibility is the more common way for blocking apps to do this, but it is a far broader permission than the job requires, and Android grants it far more reach than reading a package name.</p>
       </section>
 
@@ -249,6 +254,7 @@
         <div class="sec-head"><span class="sec-num">04</span><h2>Display Over Other Apps</h2></div>
         <p>When you open an app that your session does not permit, BlockLock covers it with a plain full-screen panel showing how much time is left. That panel is what the <strong>Display over other apps</strong> permission is for.</p>
         <p>The permission lets BlockLock draw its own window on top of other apps. It does not let BlockLock see, read, or interact with whatever is underneath. Nothing is captured and nothing is recorded &mdash; the app draws a cover, and that is all.</p>
+        <p><strong>Phones that pause apps when the screen goes off.</strong> Some phones pause apps a moment after the screen goes off. To keep blocking reliably, BlockLock keeps a tiny invisible window up during a session, and shows its own session screen on top of the lock screen. For that, it asks you to allow BlockLock in the phone's own setting for showing on the lock screen, and to confirm it with a quick check (press the power button twice). That screen shows only the time and how long the session has left; it reads nothing from the lock screen or from your notifications.</p>
       </section>
 
       <section id="admin">
@@ -300,11 +306,11 @@
           </div>
           <div class="perm-row">
             <div class="perm-name">INTERNET</div>
-            <div class="perm-why">Used solely to talk to Google Play's billing system: to check what you have bought, to show you the current price, and when you make a purchase. BlockLock makes no other network request, ever &mdash; see Section 09.</div>
+            <div class="perm-why">Used solely to talk to Google Play: its billing system (to check what you have bought, to show you the current price, and when you make a purchase) and its update check (to tell you when a newer version of BlockLock is available). BlockLock makes no other network request &mdash; see Section 09. A problem report is sent by your own email app, not by BlockLock.</div>
           </div>
           <div class="perm-row">
             <div class="perm-name">&lt;queries&gt;</div>
-            <div class="perm-why">To let you pick which apps to block, BlockLock needs the list of apps you can launch. It requests a narrowly scoped view of that list rather than the broad <span class="perm-name">QUERY_ALL_PACKAGES</span> permission, and the list never leaves your device.</div>
+            <div class="perm-why">To let you pick which apps to block, BlockLock needs the list of apps you can launch. It requests a narrowly scoped view of that list rather than the broad <span class="perm-name">QUERY_ALL_PACKAGES</span> permission, and the list never leaves your device. It also names about twenty of phone makers' own system apps (such as a phone manager or a dual-app tool), so that a problem report can say whether they are installed; your own apps are never listed in a report.</div>
           </div>
         </div>
       </section>
@@ -314,12 +320,17 @@
         <p>For completeness, this is everything BlockLock writes to its private storage. All of it is local, none of it is transmitted, and all of it is deleted when you uninstall the app:</p>
         <ul>
           <li>Your selected mode, and the app lists you chose for Allowlist and Blocklist</li>
+          <li>The session length you picked last, so it is ready next time</li>
           <li>Your schedule &mdash; days, start time, duration, and mode</li>
           <li>The current session's end time, and whether calls are allowed during lockdown</li>
           <li>When your free trial started, how long it is, and whether you have purchased the app</li>
           <li>The price Google Play last showed for the purchase, so it can be shown to you before you buy</li>
           <li>How much of today's free Total Lockdown allowance you have used</li>
+          <li>Your focus time for each day (kept for 400 days), your all-time total and the level it has reached, and the times you chose for reminders</li>
           <li>A count of how many times you opened a blocked app, by app, so the app can show you your own activity. This is <strong>kept for 90 days and then automatically deleted</strong>, and it records only that an app was opened and blocked &mdash; never what you did in it.</li>
+          <li>BlockLock's own activity log: when sessions start and end, when the screen turns on or off, which app came to the front during a session, and what BlockLock did. It holds package names and times only, <strong>never more than 1 MB, and deletes itself after about two days</strong>. It is used only to put into a problem report you choose to send.</li>
+          <li>On those phones: whether the lock-screen check has passed, and when BlockLock's screen last showed on the lock screen</li>
+          <li>Screenshots you add to a problem report are copied, made smaller and stripped of location data, then deleted within a day</li>
         </ul>
       </section>
 
@@ -335,23 +346,36 @@
         </div>
       </section>
 
+      <section id="reports">
+        <div class="sec-head"><span class="sec-num">10</span><h2>Problem Reports</h2></div>
+        <p>Phones differ a lot in how they treat apps in the background, and a report is how we find out what yours did. <strong>Report a problem</strong> (the &ldquo;?&rdquo; on the home screen, or Settings) is entirely optional. It opens your own email app with:</p>
+        <ul>
+          <li>The words you wrote, and any screenshots you chose to add</li>
+          <li>One attached file of technical details: your phone's maker, model and Android version; BlockLock's version and settings (the selected mode, whether a session is running and how long it has left); which permissions BlockLock has; whether any of about twenty phone makers' system apps are installed (a phone manager, a dual-app or second-space tool); and BlockLock's activity log of about the last two days (Section 08)</li>
+        </ul>
+        <div class="callout"><strong>What a report never contains:</strong> your messages, contacts, photos (other than screenshots you add), files, location, or anything from inside any app. Your own installed apps are never listed; the log shows only the package names of apps that were in front during a session.</div>
+        <p>You can read the attached details on the report screen before sending, and nothing leaves your phone until you press Send in your email app. The email reaches us like any other email, along with your email address, which we use only to reply. We use a report only to find and fix the problem it describes. We do not share it, sell it, or use it for anything else. We keep it until the problem is solved and <strong>delete it within 12 months at the latest</strong>; email us at any time to have it deleted sooner.</p>
+      </section>
+
       <section id="retention">
-        <div class="sec-head"><span class="sec-num">10</span><h2>Retention &amp; Deletion</h2></div>
-        <p>Because everything lives only in private storage on your device, deleting your data is as simple as it should be: <strong>uninstalling BlockLock deletes all of it immediately.</strong> There is no copy anywhere else for you to ask us to remove, because none was ever made. There is no account to close and no deletion request to file.</p>
+        <div class="sec-head"><span class="sec-num">11</span><h2>Retention &amp; Deletion</h2></div>
+        <p>Because everything the app keeps lives only in private storage on your device, deleting it is as simple as it should be: <strong>uninstalling BlockLock deletes all of it immediately.</strong> There is no account to close.</p>
+        <p>The only copy that can exist anywhere else is a problem report you emailed us (Section 10). Email us to have it deleted; otherwise it is deleted within 12 months.</p>
+        <p>An export file you saved yourself (Section 02) is yours, not part of the app's storage: it stays in your Downloads folder, or wherever you sent it, until you delete it.</p>
       </section>
 
       <section id="children">
-        <div class="sec-head"><span class="sec-num">11</span><h2>Children's Privacy</h2></div>
-        <p>BlockLock is not directed at children and is not designed to collect information from anyone, of any age &mdash; consistent with the rest of this policy, it has no mechanism to collect personal information at all.</p>
+        <div class="sec-head"><span class="sec-num">12</span><h2>Children's Privacy</h2></div>
+        <p>BlockLock is not directed at children and is not designed to collect information from anyone, of any age &mdash; consistent with the rest of this policy, it collects no personal information on its own; the only information we ever receive is a problem report someone chooses to email us.</p>
       </section>
 
       <section id="changes">
-        <div class="sec-head"><span class="sec-num">12</span><h2>Changes to This Policy</h2></div>
+        <div class="sec-head"><span class="sec-num">13</span><h2>Changes to This Policy</h2></div>
         <p>If this policy changes, the update will be posted on this same page with a new effective date at the top. Given how little the app does with data, we do not expect that to happen often.</p>
       </section>
 
       <section id="contact">
-        <div class="sec-head"><span class="sec-num">13</span><h2>Contact</h2></div>
+        <div class="sec-head"><span class="sec-num">14</span><h2>Contact</h2></div>
         <p>Questions about this policy or the app can go here:</p>
         <address>✉ <a href="mailto:support.blocklock@gmail.com">support.blocklock@gmail.com</a></address>
       </section>
